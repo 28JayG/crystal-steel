@@ -1,0 +1,106 @@
+[
+  {
+    "id": "hot-rolled-steel-sheet",
+    "title": "Hot-Rolled Steel Sheet",
+    "description": "High-quality hot-rolled steel sheets available in various thicknesses for structural and industrial applications.",
+    "imageUrl": "/images/products/hot-rolled-sheet.jpg",
+    "category": "Steel",
+    "tags": ["Steel", "Industrial", "Structural"],
+    "specs": [
+      { "name": "Thickness", "value": "1.5mm - 100mm" },
+      { "name": "Width", "value": "up to 3,000mm" },
+      { "name": "Grade", "value": "A36, S275, S355" }
+    ]
+  },
+  {
+    "id": "cold-rolled-steel-coil",
+    "title": "Cold-Rolled Steel Coil",
+    "description": "Precision cold-rolled coils with smooth surface finish for automotive and appliance manufacturing.",
+    "imageUrl": "/images/products/cold-rolled-coil.jpg",
+    "category": "Steel",
+    "tags": ["Steel", "Automotive", "Precision"],
+    "specs": [
+      { "name": "Thickness", "value": "0.3mm - 3mm" },
+      { "name": "Width", "value": "up to 1,500mm" },
+      { "name": "Tensile Strength", "value": "270 - 500 MPa" }
+    ]
+  },
+  {
+    "id": "seamless-steel-pipes",
+    "title": "Seamless Steel Pipes",
+    "description": "High-pressure seamless pipes for oil, gas, and hydraulic systems — available in carbon and alloy steel.",
+    "imageUrl": "/images/products/seamless-pipes.jpg",
+    "category": "Pipes & Tubes",
+    "tags": ["Pipes", "Hydraulic", "Oil & Gas"],
+    "specs": [
+      { "name": "OD", "value": "10mm - 500mm" },
+      { "name": "Wall Thickness", "value": "1mm - 50mm" },
+      { "name": "Standard", "value": "ASTM A53, API 5L" }
+    ]
+  },
+  {
+    "id": "industrial-metal-flanges",
+    "title": "Industrial Metal Flanges",
+    "description": "Weld-neck, slip-on, and blind flanges machined to ANSI/ASME standards for pipeline connections.",
+    "imageUrl": "/images/products/metal-flanges.jpg",
+    "category": "Structural",
+    "tags": ["Flanges", "Machined", "Pipelines"],
+    "specs": [
+      { "name": "Rating", "value": "150# - 2500#" },
+      { "name": "Size", "value": "1/2\" - 60\"" },
+      { "name": "Material", "value": "CS, SS, Alloy" }
+    ]
+  },
+  {
+    "id": "precision-gear-sets",
+    "title": "Precision Gear Sets",
+    "description": "Custom-cut spur, helical, and bevel gears manufactured to tight tolerances for heavy-duty machinery.",
+    "imageUrl": "/images/products/gear-sets.jpg",
+    "category": "Machined Parts",
+    "tags": ["Gears", "Machined", "Power Transmission"],
+    "specs": [
+      { "name": "Module", "value": "1 - 20" },
+      { "name": "Material", "value": "42CrMo4, 20MnCr5" },
+      { "name": "Quality Class", "value": "DIN 6 - 10" }
+    ]
+  },
+  {
+    "id": "custom-metal-fabrication",
+    "title": "Custom Metal Fabrication",
+    "description": "End-to-end custom fabrication services — from design to delivery for complex metal assemblies.",
+    "imageUrl": "/images/products/custom-fabrication.jpg",
+    "category": "Custom",
+    "tags": ["Fabrication", "Welding", "Assembly"],
+    "specs": [
+      { "name": "Material", "value": "Any metal / alloy" },
+      { "name": "Processes", "value": "Laser, plasma, waterjet" },
+      { "name": "Finishing", "value": "Welding, forming, coating" }
+    ]
+  },
+  {
+    "id": "structural-steel-beams",
+    "title": "Structural Steel Beams",
+    "description": "H-beams, I-beams, and channels for construction and heavy industrial frameworks.",
+    "imageUrl": "/images/products/steel-beams.jpg",
+    "category": "Structural",
+    "tags": ["Structural", "Beams", "Construction"],
+    "specs": [
+      { "name": "Types", "value": "H-Beam, I-Beam, HN" },
+      { "name": "Length", "value": "up to 18m" },
+      { "name": "Grade", "value": "Q235, Q345, A36" }
+    ]
+  },
+  {
+    "id": "alloy-steel-bars",
+    "title": "Alloy Steel Bars",
+    "description": "Round, square, and hexagonal bars in alloy steel for shafts, gears, and tooling applications.",
+    "imageUrl": "/images/products/alloy-bars.jpg",
+    "category": "Steel",
+    "tags": ["Steel", "Bars", "Tooling"],
+    "specs": [
+      { "name": "Diameter", "value": "10mm - 300mm" },
+      { "name": "Alloys", "value": "4140, 4340, H13" },
+      { "name": "Condition", "value": "Annealed / QT" }
+    ]
+  }
+]
