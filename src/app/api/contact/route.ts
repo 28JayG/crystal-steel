@@ -48,9 +48,8 @@ export async function POST(request: Request) {
       secure: smtpSecure,
       requireTLS: true,
       auth: {
-        type: 'OAuth2',
         user: smtpUser,
-        accessToken: smtpPass,
+        pass: smtpPass,
       },
     });
 

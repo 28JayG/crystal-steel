@@ -1,106 +1,75 @@
 [
   {
-    "id": "hot-rolled-steel-sheet",
-    "title": "Hot-Rolled Steel Sheet",
-    "description": "High-quality hot-rolled steel sheets available in various thicknesses for structural and industrial applications.",
-    "imageUrl": "/images/products/hot-rolled-sheet.jpg",
-    "category": "Steel",
-    "tags": ["Steel", "Industrial", "Structural"],
+    "id": "aluminum-deoxidizer-deox",
+    "title": "Aluminum Deox",
+    "description": "High-quality secondary aluminum deoxidizer manufactured from recycled aluminum scrap for steelmaking applications.",
+    "imageUrl": "/images/products/aluminum-deox.jpg",
+    "category": "Deoxidizer",
+    "tags": ["Aluminum", "Deox", "Steelmaking"],
     "specs": [
-      { "name": "Thickness", "value": "1.5mm - 100mm" },
-      { "name": "Width", "value": "up to 3,000mm" },
-      { "name": "Grade", "value": "A36, S275, S355" }
+      { "name": "Production Capacity", "value": "12,000 MTPA" },
+      { "name": "No of Furnaces", "value": "12" },
+      {
+        "name": "Products",
+        "value": "Aluminum Shots, Aluminum Cubes, Aluminum Notch Bar"
+      }
     ]
   },
   {
-    "id": "cold-rolled-steel-coil",
-    "title": "Cold-Rolled Steel Coil",
-    "description": "Precision cold-rolled coils with smooth surface finish for automotive and appliance manufacturing.",
-    "imageUrl": "/images/products/cold-rolled-coil.jpg",
-    "category": "Steel",
-    "tags": ["Steel", "Automotive", "Precision"],
+    "id": "aluminum-shots",
+    "title": "Aluminum Shots",
+    "description": "Secondary aluminum shots produced through responsible recycling for industrial applications.",
+    "imageUrl": "/images/products/aluminum-shots.jpg",
+    "category": "Shots",
+    "tags": ["Aluminum", "Shots", "Recycled"],
     "specs": [
-      { "name": "Thickness", "value": "0.3mm - 3mm" },
-      { "name": "Width", "value": "up to 1,500mm" },
-      { "name": "Tensile Strength", "value": "270 - 500 MPa" }
+      { "name": "Shape", "value": "Spherical and Oval" },
+      { "name": "Aluminum Content", "value": "98 % Min" },
+      { "name": "Size", "value": "5 mm to 65 mm" }
     ]
   },
   {
-    "id": "seamless-steel-pipes",
-    "title": "Seamless Steel Pipes",
-    "description": "High-pressure seamless pipes for oil, gas, and hydraulic systems — available in carbon and alloy steel.",
-    "imageUrl": "/images/products/seamless-pipes.jpg",
-    "category": "Pipes & Tubes",
-    "tags": ["Pipes", "Hydraulic", "Oil & Gas"],
+    "id": "aluminum-ingots",
+    "title": "Aluminum Ingots",
+    "description": "Secondary aluminum ingots produced through responsible recycling for industrial applications.",
+    "imageUrl": "/images/products/aluminum-alloys-ingots.jpg",
+    "category": "Ingots",
+    "tags": ["Aluminum", "Ingots", "Recycled"],
     "specs": [
-      { "name": "OD", "value": "10mm - 500mm" },
-      { "name": "Wall Thickness", "value": "1mm - 50mm" },
-      { "name": "Standard", "value": "ASTM A53, API 5L" }
+      { "name": "Production Capacity", "value": "12,000 MTPA" },
+      { "name": "No of Furnaces", "value": "15" },
+      {
+        "name": "Alloy Grades",
+        "value": "ADC12, AC2A, AC4B, ALSi7MgTi, AISi5Cu, AISi9Cu, ENAC43500, AC4CH, AK5M2, LM24, Lm6"
+      }
     ]
   },
   {
-    "id": "industrial-metal-flanges",
-    "title": "Industrial Metal Flanges",
-    "description": "Weld-neck, slip-on, and blind flanges machined to ANSI/ASME standards for pipeline connections.",
-    "imageUrl": "/images/products/metal-flanges.jpg",
-    "category": "Structural",
-    "tags": ["Flanges", "Machined", "Pipelines"],
+    "id": "aluminum-notch-bars",
+    "title": "Aluminum Notch Bars",
+    "description": "Recycled aluminum notch bars manufactured for steelmaking and industrial applications.",
+    "imageUrl": "/images/products/aluminum-notch-bars.jpg",
+    "category": "Notch Bars",
+    "tags": ["Aluminum", "Notch Bars", "Steelmaking"],
     "specs": [
-      { "name": "Rating", "value": "150# - 2500#" },
-      { "name": "Size", "value": "1/2\" - 60\"" },
-      { "name": "Material", "value": "CS, SS, Alloy" }
+      { "name": "Shape", "value": "Rectangular Bars" },
+      { "name": "Weight Per Piece", "value": "1000 ± 100 Grams" },
+      { "name": "Aluminum Content", "value": "98 % Min" },
+      { "name": "Size", "value": "300 x 50 x 35 mm ( ± 10 mm )" }
     ]
   },
   {
-    "id": "precision-gear-sets",
-    "title": "Precision Gear Sets",
-    "description": "Custom-cut spur, helical, and bevel gears manufactured to tight tolerances for heavy-duty machinery.",
-    "imageUrl": "/images/products/gear-sets.jpg",
-    "category": "Machined Parts",
-    "tags": ["Gears", "Machined", "Power Transmission"],
+    "id": "aluminum-cubes",
+    "title": "Aluminum Cubes",
+    "description": "Secondary aluminum cubes produced from recycled aluminum scrap for industrial applications.",
+    "imageUrl": "/images/products/aluminum-cubes.jpg",
+    "category": "Cubes",
+    "tags": ["Aluminum", "Cubes", "Recycled"],
     "specs": [
-      { "name": "Module", "value": "1 - 20" },
-      { "name": "Material", "value": "42CrMo4, 20MnCr5" },
-      { "name": "Quality Class", "value": "DIN 6 - 10" }
-    ]
-  },
-  {
-    "id": "custom-metal-fabrication",
-    "title": "Custom Metal Fabrication",
-    "description": "End-to-end custom fabrication services — from design to delivery for complex metal assemblies.",
-    "imageUrl": "/images/products/custom-fabrication.jpg",
-    "category": "Custom",
-    "tags": ["Fabrication", "Welding", "Assembly"],
-    "specs": [
-      { "name": "Material", "value": "Any metal / alloy" },
-      { "name": "Processes", "value": "Laser, plasma, waterjet" },
-      { "name": "Finishing", "value": "Welding, forming, coating" }
-    ]
-  },
-  {
-    "id": "structural-steel-beams",
-    "title": "Structural Steel Beams",
-    "description": "H-beams, I-beams, and channels for construction and heavy industrial frameworks.",
-    "imageUrl": "/images/products/steel-beams.jpg",
-    "category": "Structural",
-    "tags": ["Structural", "Beams", "Construction"],
-    "specs": [
-      { "name": "Types", "value": "H-Beam, I-Beam, HN" },
-      { "name": "Length", "value": "up to 18m" },
-      { "name": "Grade", "value": "Q235, Q345, A36" }
-    ]
-  },
-  {
-    "id": "alloy-steel-bars",
-    "title": "Alloy Steel Bars",
-    "description": "Round, square, and hexagonal bars in alloy steel for shafts, gears, and tooling applications.",
-    "imageUrl": "/images/products/alloy-bars.jpg",
-    "category": "Steel",
-    "tags": ["Steel", "Bars", "Tooling"],
-    "specs": [
-      { "name": "Diameter", "value": "10mm - 300mm" },
-      { "name": "Alloys", "value": "4140, 4340, H13" },
-      { "name": "Condition", "value": "Annealed / QT" }
+      { "name": "Shape", "value": "Pyramid Cubical / Cylindrical Cubical" },
+      { "name": "Weight Per Piece", "value": "225 ± 25 Grams" },
+      { "name": "Aluminum Content", "value": "98 % Min" },
+      { "name": "Size", "value": "50 x 50 x 50 mm ( ± 10 mm )" }
     ]
   }
 ]
