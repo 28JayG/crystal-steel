@@ -6,26 +6,26 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='w-full bg-slate-100 border-t border-slate-200 text-slate-600 py-16'>
+    <footer className='w-full bg-[#070A11] border-t border-slate-900 text-slate-400 py-16'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Top Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12'>
           {/* Column 1: Company Profile */}
           <div className='flex flex-col gap-5'>
             <Link href='/' className='flex items-center gap-3'>
-              <div className='flex h-9 w-9 items-center justify-center rounded bg-amber-500 text-slate-950 font-bold shadow-xs'>
+              <div className='flex h-9 w-9 items-center justify-center rounded bg-amber-500 text-slate-950 font-bold'>
                 <Hammer className='h-4.5 w-4.5' />
               </div>
               <div className='flex flex-col'>
-                <span className='font-extrabold text-base tracking-wider text-slate-900 uppercase leading-none'>
+                <span className='font-extrabold text-base tracking-wider text-white uppercase leading-none'>
                   Crystal
                 </span>
-                <span className='text-[9px] font-bold tracking-widest text-amber-600 uppercase'>
+                <span className='text-[9px] font-bold tracking-widest text-amber-500 uppercase'>
                   Metal Industry
                 </span>
               </div>
             </Link>
-            <p className='text-sm text-slate-600 leading-relaxed max-w-xs'>
+            <p className='text-sm text-slate-400 leading-relaxed max-w-xs'>
               Recycling aluminum scrap into high-quality secondary aluminum
               products for the steel and industrial sectors, with a focus on
               reliability, sustainability, and long-term value.
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             <div className='flex gap-4'>
               <a
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-600 hover:bg-slate-50 transition-all duration-200 shadow-2xs'
+                className='flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 border border-slate-800 hover:border-amber-500 hover:text-white transition-all duration-200'
                 aria-label='Facebook'
               >
                 <svg
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
               </a>
               <a
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-600 hover:bg-slate-50 transition-all duration-200 shadow-2xs'
+                className='flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 border border-slate-800 hover:border-amber-500 hover:text-white transition-all duration-200'
                 aria-label='LinkedIn'
               >
                 <svg
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
               </a>
               <a
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-600 hover:bg-slate-50 transition-all duration-200 shadow-2xs'
+                className='flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 border border-slate-800 hover:border-amber-500 hover:text-white transition-all duration-200'
                 aria-label='Twitter / X'
               >
                 <svg
@@ -84,14 +84,14 @@ export const Footer: React.FC = () => {
 
           {/* Column 2: Quick Links */}
           <div className='flex flex-col gap-4'>
-            <h4 className='text-slate-900 text-sm font-bold tracking-wider uppercase'>
+            <h4 className='text-white text-sm font-bold tracking-wider uppercase'>
               Quick Links
             </h4>
             <ul className='flex flex-col gap-3 text-sm'>
               <li>
                 <Link
                   href='/'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Home
                 </Link>
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/products'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Products
                 </Link>
@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/about'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   About Us
                 </Link>
@@ -115,7 +115,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/contact'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Contact
                 </Link>
@@ -125,14 +125,14 @@ export const Footer: React.FC = () => {
 
           {/* Column 3: Products */}
           <div className='flex flex-col gap-4'>
-            <h4 className='text-slate-900 text-sm font-bold tracking-wider uppercase'>
+            <h4 className='text-white text-sm font-bold tracking-wider uppercase'>
               Products
             </h4>
             <ul className='flex flex-col gap-3 text-sm'>
               <li>
                 <Link
                   href='/products/deoxidizer'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Aluminum Deoxidizer
                 </Link>
@@ -140,7 +140,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/products/shots'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Aluminum Shots
                 </Link>
@@ -148,7 +148,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/products/ingots'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Aluminum Ingots
                 </Link>
@@ -156,7 +156,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/products/notch-bars'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Aluminum Notch Bars
                 </Link>
@@ -164,7 +164,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href='/products/cubes'
-                  className='hover:text-amber-600 transition-colors'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   Aluminum Cubes
                 </Link>
@@ -174,31 +174,40 @@ export const Footer: React.FC = () => {
 
           {/* Column 4: Contact Info */}
           <div className='flex flex-col gap-4'>
-            <h4 className='text-slate-900 text-sm font-bold tracking-wider uppercase'>
+            <h4 className='text-white text-sm font-bold tracking-wider uppercase'>
               Contact
             </h4>
             <ul className='flex flex-col gap-4 text-sm'>
               <li className='flex items-start gap-3'>
-                <MapPin className='h-5 w-5 text-amber-600 shrink-0 mt-0.5' />
-                <span className='leading-relaxed text-slate-600'>
+                <MapPin className='h-5 w-5 text-amber-500 shrink-0 mt-0.5' />
+                <span className='leading-relaxed'>
                   Jamshedpur, Jharkhand, India
                 </span>
               </li>
               <li className='flex items-center gap-3'>
-                <Phone className='h-4 w-4 text-amber-600 shrink-0' />
+                <Phone className='h-4 w-4 text-amber-500 shrink-0' />
                 <a
                   href='tel:+917004602074'
-                  className='hover:text-amber-600 transition-colors text-slate-600'
+                  className='hover:text-amber-500 transition-colors'
                 >
                   +91 70046 02074
                 </a>
               </li>
+              {/* <li className='flex items-center gap-3'>
+                <Mail className='h-4 w-4 text-amber-500 shrink-0' />
+                <a
+                  href='mailto:info@crystalmetal.com'
+                  className='hover:text-amber-500 transition-colors'
+                >
+                  info@crystalmetal.com
+                </a>
+              </li> */}
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className='border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500'>
+        <div className='border-t border-slate-900 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs'>
           <p>© {currentYear} Crystal Metal Industry. All rights reserved.</p>
           <p className='text-slate-500 tracking-wide'>
             Built for strength. Engineered for excellence.

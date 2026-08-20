@@ -5,8 +5,8 @@
 }
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  --background: #0B0F19;
+  --foreground: #F8FAFC;
 }
 
 body {
@@ -14,23 +14,23 @@ body {
   color: var(--foreground);
 }
 
-/* Custom Scrollbar for light theme */
+/* Custom Scrollbar for premium dark theme */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #070A11;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #1E293B;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F59E0B;
+  background: #EAB308;
 }
 
 html {

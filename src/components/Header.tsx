@@ -26,19 +26,19 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md shadow-xs">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-800 bg-[#0B0F19]/90 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded bg-amber-500 text-slate-950 font-bold transition-transform group-hover:scale-105 shadow-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded bg-amber-500 text-slate-950 font-bold transition-transform group-hover:scale-105">
               <Hammer className="h-5 w-5" />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-lg tracking-wider text-slate-900 uppercase leading-none">
+              <span className="font-extrabold text-lg tracking-wider text-white uppercase leading-none">
                 Crystal
               </span>
-              <span className="text-[10px] font-bold tracking-widest text-amber-600 uppercase">
+              <span className="text-[10px] font-bold tracking-widest text-amber-500 uppercase">
                 Metal Industry
               </span>
             </div>
@@ -52,8 +52,8 @@ export const Header: React.FC = () => {
                 href={item.href}
                 className={`text-sm font-semibold transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-amber-600 font-bold'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'text-amber-500 font-bold'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {item.name}
@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
           <div className="hidden md:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex h-11 items-center justify-center rounded bg-amber-500 px-6 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow-md"
+              className="inline-flex h-11 items-center justify-center rounded bg-amber-500 px-6 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_15px_rgba(245,158,11,0.2)]"
             >
               Get a Quote
             </Link>
@@ -76,7 +76,7 @@ export const Header: React.FC = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center rounded p-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:outline-none"
+              className="inline-flex items-center justify-center rounded p-2 text-slate-400 hover:bg-slate-800 hover:text-white focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-b border-slate-200 bg-white/95 backdrop-blur-lg shadow-lg">
+        <div className="md:hidden border-b border-slate-800 bg-[#0B0F19]/95 backdrop-blur-lg">
           <div className="space-y-1 px-4 py-6">
             {navItems.map((item) => (
               <Link
@@ -96,8 +96,8 @@ export const Header: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block rounded px-3 py-2.5 text-base font-semibold transition-colors ${
                   isActive(item.href)
-                    ? 'bg-amber-50 text-amber-600 font-bold'
-                    : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
+                    ? 'bg-slate-800 text-amber-500 font-bold'
+                    : 'text-slate-400 hover:bg-slate-900 hover:text-white'
                 }`}
               >
                 {item.name}
@@ -107,7 +107,7 @@ export const Header: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex w-full h-11 items-center justify-center rounded bg-amber-500 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 shadow-sm"
+                className="flex w-full h-11 items-center justify-center rounded bg-amber-500 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600"
               >
                 Get a Quote
               </Link>
