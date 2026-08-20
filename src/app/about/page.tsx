@@ -13,7 +13,7 @@ import { Typography } from '@/components/ui/Typography';
 export const metadata = {
   title: 'About Us | Crystal Metal Industry',
   description:
-    'Learn about our journey, core values, manufacturing milestones, and the expert engineering team driving precision in metallurgy and custom metal fabrication.',
+    'Learn about our journey, core values, manufacturing milestones, and the experienced leadership team driving secondary aluminum manufacturing.',
 };
 
 export default function AboutPage() {
@@ -69,33 +69,30 @@ export default function AboutPage() {
     {
       name: 'Shivam Poddar',
       role: 'Director',
-      bio: '',
       imageLetter: 'S',
     },
     {
       name: 'Vijay Mittal',
       role: 'Director',
-      bio: '',
       imageLetter: 'V',
     },
     {
       name: 'Navin Poddar',
       role: 'Director',
-      bio: '',
       imageLetter: 'N',
     },
   ];
 
   return (
-    <div className='min-h-screen bg-[#0B0F19] py-16 md:py-24'>
+    <div className='min-h-screen bg-white py-14 md:py-20'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Breadcrumbs */}
-        <nav className='flex items-center gap-2 mb-8 text-xs sm:text-sm font-semibold text-slate-500'>
+        <nav className='flex items-center gap-2 mb-8 text-xs sm:text-sm font-semibold text-[#718096]'>
           <Link href='/' className='hover:text-amber-500 transition-colors'>
             Home
           </Link>
-          <ChevronRight className='h-4 w-4 text-slate-600 shrink-0' />
-          <span className='text-slate-300'>About</span>
+          <ChevronRight className='h-4 w-4 text-[#718096] shrink-0' />
+          <span className='text-[#0B1628] font-bold'>About</span>
         </nav>
 
         {/* Page Header */}
@@ -103,50 +100,44 @@ export default function AboutPage() {
           <Typography variant='accentLabel' className='mb-2 block'>
             Our Journey
           </Typography>
-          <Typography
-            variant='h1'
-            className='mb-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white'
-          >
+          <h1 className='mb-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B1628] tracking-tight'>
             About Us
-          </Typography>
-          <Typography
-            variant='body'
-            className='text-base sm:text-lg text-slate-400'
-          >
+          </h1>
+          <p className='text-base sm:text-lg text-[#526176] leading-relaxed'>
             Building a responsible future through aluminum recycling, secondary
             aluminum products, and strong industrial partnerships.
-          </Typography>
+          </p>
         </div>
 
         {/* Who We Are Story Section */}
         <section className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24'>
           <div className='flex flex-col gap-5'>
-            <Typography variant='h2' className='text-xl md:text-2xl font-bold'>
+            <h2 className='text-2xl sm:text-3xl font-extrabold text-[#0B1628] tracking-tight'>
               Who We Are
-            </Typography>
-            <Typography variant='body' className='text-slate-300'>
+            </h2>
+            <p className='text-sm sm:text-base text-[#526176] leading-relaxed'>
               Crystal Metal Industry is an aluminum scrap recycling company
               based in Jamshedpur, Jharkhand. Established in 2026, we specialize
               in converting aluminum scrap into high-quality secondary aluminum
               products for industrial applications.
-            </Typography>
-            <Typography variant='body' className='text-slate-300'>
+            </p>
+            <p className='text-sm sm:text-base text-[#526176] leading-relaxed'>
               Our flagship product is Aluminum Deoxidizer (Deox), manufactured
               primarily for steelmaking applications. Our product portfolio also
               includes aluminum ingots, notch bars, and cubes.
-            </Typography>
-            <Typography variant='body' className='text-slate-300'>
+            </p>
+            <p className='text-sm sm:text-base text-[#526176] leading-relaxed'>
               We are backed by a group with more than 15 years of experience
               across manufacturing and international trade. This foundation
               provides us with strong commercial expertise, industry
               relationships, operational knowledge, and international sourcing
               capabilities.
-            </Typography>
+            </p>
           </div>
-          <div className='relative h-[250px] sm:h-[350px] rounded overflow-hidden shadow-xl border border-slate-800'>
+          <div className='relative h-[280px] sm:h-[380px] rounded-2xl overflow-hidden shadow-xl border border-[#DDE3EA]'>
             <Image
               src='/images/about_workspace.png'
-              alt='Automated CNC shop workspace'
+              alt='Crystal Metal Industry workspace and manufacturing facility'
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
               className='object-cover'
@@ -155,14 +146,14 @@ export default function AboutPage() {
         </section>
 
         {/* Core Values Section */}
-        <section className='mb-24 text-center'>
+        <section className='mb-24 bg-[#F5F7FA] p-8 sm:p-12 md:p-16 rounded-3xl border border-[#DDE3EA] text-center'>
           <Typography variant='accentLabel' className='mb-2 block'>
             Our Core Values
           </Typography>
-          <Typography variant='h2' className='mb-12 relative inline-block'>
+          <h2 className='text-3xl sm:text-4xl font-extrabold text-[#0B1628] tracking-tight mb-12 relative inline-block'>
             Built on Integrity
-            <span className='absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-12 h-0.5 bg-amber-500 rounded' />
-          </Typography>
+            <span className='absolute -bottom-3 left-1/2 -translate-x-1/2 w-14 h-1 bg-amber-500 rounded-full' />
+          </h2>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {coreValues.map((val, idx) => {
@@ -170,61 +161,58 @@ export default function AboutPage() {
               return (
                 <div
                   key={idx}
-                  className='flex flex-col items-center p-8 rounded bg-[#121826] border border-slate-800 hover:border-slate-700 transition-colors'
+                  className='flex flex-col items-center p-8 rounded-2xl bg-white border border-[#DDE3EA] hover:border-amber-500 shadow-xs hover:shadow-lg transition-all text-center'
                 >
-                  <div className='flex h-12 w-12 items-center justify-center rounded bg-amber-500/10 text-amber-500 mb-6'>
-                    <Icon className='h-6 w-6' />
+                  <div className='flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-500 mb-6'>
+                    <Icon className='h-7 w-7' />
                   </div>
-                  <Typography variant='h3' className='mb-3 text-lg font-bold'>
+                  <h3 className='mb-3 text-lg font-bold text-[#0B1628]'>
                     {val.title}
-                  </Typography>
-                  <Typography variant='body' className='text-sm'>
+                  </h3>
+                  <p className='text-sm text-[#526176] leading-relaxed'>
                     {val.description}
-                  </Typography>
+                  </p>
                 </div>
               );
             })}
           </div>
         </section>
 
-        {/* Timeline Section */}
+        {/* Timeline Section (Milestones on clean white background) */}
         <section className='mb-24'>
           <div className='text-center mb-16'>
             <Typography variant='accentLabel' className='mb-2 block'>
               Our History
             </Typography>
-            <Typography variant='h2' className='relative inline-block'>
+            <h2 className='text-3xl sm:text-4xl font-extrabold text-[#0B1628] tracking-tight relative inline-block'>
               Key Milestones
-              <span className='absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-12 h-0.5 bg-amber-500 rounded' />
-            </Typography>
+              <span className='absolute -bottom-3 left-1/2 -translate-x-1/2 w-14 h-1 bg-amber-500 rounded-full' />
+            </h2>
           </div>
 
           {/* Timeline Tree Layout */}
-          <div className='relative border-l border-slate-800 ml-4 md:ml-0 md:left-1/2 md:-translate-x-1/2 max-w-2xl mx-auto py-4 space-y-12'>
+          <div className='relative border-l-2 border-[#DDE3EA] ml-4 md:ml-0 md:left-1/2 md:-translate-x-1/2 max-w-2xl mx-auto py-4 space-y-10'>
             {milestones.map((m, idx) => (
               <div
                 key={idx}
                 className='relative flex flex-col md:flex-row items-start md:items-center'
               >
                 {/* Timeline node */}
-                <div className='absolute left-[-21px] md:left-[-11px] md:-translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 border-2 border-amber-500 text-amber-500 z-10'>
+                <div className='absolute left-[-21px] md:left-[-11px] md:-translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white border-2 border-amber-500 text-amber-500 shadow-sm z-10'>
                   <Milestone className='h-4 w-4' />
                 </div>
 
                 {/* Timeline card container */}
-                <div className='ml-8 md:ml-12 p-6 rounded bg-[#121826] border border-slate-800 w-full'>
-                  <span className='text-xs font-bold text-amber-500 uppercase tracking-widest block mb-1'>
+                <div className='ml-8 md:ml-12 p-6 rounded-2xl bg-white border border-[#DDE3EA] hover:border-amber-500 shadow-xs hover:shadow-md transition-all w-full'>
+                  <span className='text-xs font-bold text-amber-600 uppercase tracking-widest block mb-1'>
                     {m.year}
                   </span>
-                  <Typography variant='h3' className='mb-2 text-base font-bold'>
+                  <h3 className='mb-2 text-base md:text-lg font-bold text-[#0B1628]'>
                     {m.title}
-                  </Typography>
-                  <Typography
-                    variant='body'
-                    className='text-xs sm:text-sm text-slate-400'
-                  >
+                  </h3>
+                  <p className='text-xs sm:text-sm text-[#526176] leading-relaxed'>
                     {m.description}
-                  </Typography>
+                  </p>
                 </div>
               </div>
             ))}
@@ -232,70 +220,58 @@ export default function AboutPage() {
         </section>
 
         {/* Leadership Section */}
-        <section className='mb-24 text-center'>
-          <div className='mb-16'>
+        <section className='mb-24 bg-[#F5F7FA] p-8 sm:p-12 md:p-16 rounded-3xl border border-[#DDE3EA] text-center'>
+          <div className='mb-14'>
             <Typography variant='accentLabel' className='mb-2 block'>
               Our Leadership
             </Typography>
-            <Typography variant='h2' className='relative inline-block'>
+            <h2 className='text-3xl sm:text-4xl font-extrabold text-[#0B1628] tracking-tight relative inline-block'>
               Meet Our Leadership Team
-              <span className='absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-12 h-0.5 bg-amber-500 rounded' />
-            </Typography>
+              <span className='absolute -bottom-3 left-1/2 -translate-x-1/2 w-14 h-1 bg-amber-500 rounded-full' />
+            </h2>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {team.map((member, idx) => (
               <div
                 key={idx}
-                className='flex flex-col items-center text-center p-8 rounded bg-[#121826] border border-slate-800 hover:border-slate-700 transition-all duration-200 group'
+                className='flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-[#DDE3EA] hover:border-amber-500 hover:shadow-lg transition-all duration-200 group'
               >
-                {/* Avatar Graphic placeholder (initial) */}
-                <div className='flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 border-2 border-slate-800 text-2xl font-extrabold text-amber-500 mb-6 group-hover:border-amber-500/50 group-hover:scale-105 transition-all'>
+                {/* Avatar Graphic */}
+                <div className='flex h-20 w-20 items-center justify-center rounded-full bg-amber-50 border-2 border-amber-200 text-2xl font-extrabold text-amber-600 mb-6 group-hover:border-amber-500 group-hover:scale-105 transition-all shadow-xs'>
                   {member.imageLetter}
                 </div>
-                <Typography
-                  variant='h3'
-                  className='mb-1 text-base font-bold text-white'
-                >
+                <h3 className='mb-1 text-lg font-bold text-[#0B1628]'>
                   {member.name}
-                </Typography>
-                <span className='text-xs font-bold text-amber-500 uppercase tracking-wider block mb-4'>
+                </h3>
+                <span className='text-xs font-bold text-amber-600 uppercase tracking-wider block'>
                   {member.role}
                 </span>
-                <Typography
-                  variant='body'
-                  className='text-xs text-slate-400 leading-relaxed'
-                >
-                  {member.bio}
-                </Typography>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Bottom CTA Banner */}
-        <div className='rounded bg-[#121826] border border-slate-800 p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center gap-6 shadow-xl'>
-          <Typography variant='h2' className='text-2xl md:text-3xl font-bold'>
+        {/* Bottom CTA Banner (Contained Navy Panel) */}
+        <div className='rounded-2xl bg-[#0B1628] border border-[#1E293B] p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center gap-6 shadow-2xl text-white'>
+          <h2 className='text-2xl md:text-3xl font-extrabold text-white'>
             Partner with Crystal Metal Industry
-          </Typography>
-          <Typography
-            variant='body'
-            className='max-w-xl text-slate-400 text-sm md:text-base'
-          >
+          </h2>
+          <p className='max-w-xl text-[#CBD5E1] text-sm md:text-base leading-relaxed'>
             Whether you require Aluminum Deoxidizer or other secondary aluminum
             products, we are ready to build reliable, long-term industrial
             partnerships.
-          </Typography>
+          </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center mt-2 w-full sm:w-auto'>
             <Link
               href='/contact'
-              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded bg-amber-500 px-8 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 active:scale-[0.98]'
+              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-amber-500 px-8 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 active:scale-[0.98] shadow-md'
             >
               Contact Us Today
             </Link>
             <Link
               href='/products'
-              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded border border-slate-700 bg-slate-900/50 px-8 text-sm font-bold text-white transition-all hover:bg-slate-800 active:scale-[0.98]'
+              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-white/40 bg-transparent px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]'
             >
               Explore Products
             </Link>

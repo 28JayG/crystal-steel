@@ -3,7 +3,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
-import { Typography } from '@/components/ui/Typography';
 
 const ContactFormContent: React.FC = () => {
   const searchParams = useSearchParams();
@@ -12,7 +11,7 @@ const ContactFormContent: React.FC = () => {
     email: '',
     company: '',
     phone: '',
-    interest: 'Other',
+    interest: 'Deox products',
     message: '',
   });
 
@@ -26,15 +25,11 @@ const ContactFormContent: React.FC = () => {
     const productParam = searchParams.get('product');
     if (productParam) {
       const productMap: Record<string, string> = {
-        'hot-rolled-steel-sheet': 'Steel Sheets',
-        'cold-rolled-steel-coil': 'Steel Sheets',
-        'seamless-steel-pipes': 'Metal Pipes',
-        'industrial-metal-flanges': 'Other',
-        'precision-gear-sets': 'CNC Machining',
-        'custom-metal-fabrication': 'Custom Fabrication',
-        'structural-steel-beams': 'Other',
-        'alloy-steel-bars': 'Steel Sheets',
-        custom: 'Custom Fabrication',
+        'deox-notch-bars': 'Deox products',
+        'deox-cubes': 'Deox products',
+        'deox-shots': 'Deox products',
+        'aluminum-ingots': 'Ingots',
+        custom: 'Others',
       };
 
       const matchedInterest = productMap[productParam];
@@ -89,7 +84,6 @@ const ContactFormContent: React.FC = () => {
       const data = await response.json();
 
       if (!response.ok || !data.success) {
-        console.log(data);
         throw new Error(
           data.error || 'Failed to send message try again later.',
         );
@@ -104,7 +98,7 @@ const ContactFormContent: React.FC = () => {
         email: '',
         company: '',
         phone: '',
-        interest: 'Other',
+        interest: 'Deox products',
         message: '',
       });
     } catch (err: unknown) {
@@ -117,23 +111,20 @@ const ContactFormContent: React.FC = () => {
 
   if (status === 'success') {
     return (
-      <div className='flex flex-col items-center justify-center p-8 bg-slate-900/40 border border-emerald-500/20 rounded-lg text-center h-full'>
+      <div className='flex flex-col items-center justify-center p-8 bg-[#F5F7FA] border border-emerald-500/30 rounded-2xl text-center h-full shadow-md'>
         <CheckCircle2 className='h-16 w-16 text-emerald-500 mb-6 animate-bounce' />
-        <Typography variant='h3' className='text-white mb-3 font-bold'>
+        <h3 className='text-xl font-extrabold text-[#0B1628] mb-3'>
           Message Sent Successfully!
-        </Typography>
-        <Typography
-          variant='body'
-          className='text-slate-300 text-sm max-w-sm mb-6'
-        >
+        </h3>
+        <p className='text-sm text-[#526176] max-w-sm mb-6 leading-relaxed'>
           Thank you for reaching out. A Crystal Metal specialist will review
           your specifications and get in touch with you within 24 business
           hours.
-        </Typography>
+        </p>
         <button
           onClick={() => setStatus('idle')}
           type='button'
-          className='inline-flex h-10 items-center justify-center rounded bg-slate-800 border border-slate-700 px-6 text-xs font-bold text-white hover:bg-slate-700 transition-colors'
+          className='inline-flex h-10 items-center justify-center rounded-lg bg-amber-500 px-6 text-xs font-bold text-slate-950 hover:bg-amber-600 transition-colors shadow-xs cursor-pointer'
         >
           Send Another Message
         </button>
@@ -144,19 +135,19 @@ const ContactFormContent: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='flex flex-col gap-5 p-8 rounded-lg bg-[#121826] border border-slate-800 shadow-xl'
+      className='flex flex-col gap-5 p-8 rounded-2xl bg-white border border-[#DDE3EA] shadow-xl'
     >
       <div className='text-center sm:text-left mb-2'>
-        <Typography variant='h3' className='font-bold mb-1'>
+        <h3 className='text-2xl font-extrabold text-[#0B1628] mb-1'>
           Request a Quote / Contact Us
-        </Typography>
-        <Typography variant='small' className='text-slate-400'>
+        </h3>
+        <p className='text-sm text-[#526176]'>
           Fill out the form below and our engineers will reply shortly.
-        </Typography>
+        </p>
       </div>
 
       {status === 'error' && (
-        <div className='flex items-center gap-3 p-4 bg-rose-500/10 border border-rose-500/20 rounded text-rose-500 text-xs'>
+        <div className='flex items-center gap-3 p-4 bg-rose-50 border border-rose-200 rounded-lg text-rose-700 text-xs'>
           <AlertCircle className='h-5 w-5 shrink-0' />
           <span>{errorMessage}</span>
         </div>
@@ -167,7 +158,7 @@ const ContactFormContent: React.FC = () => {
         <div className='flex flex-col gap-1.5'>
           <label
             htmlFor='fullName'
-            className='text-xs font-bold text-slate-400 uppercase tracking-wider'
+            className='text-xs font-bold text-[#0B1628] uppercase tracking-wider'
           >
             Full Name <span className='text-amber-500'>*</span>
           </label>
@@ -179,7 +170,7 @@ const ContactFormContent: React.FC = () => {
             value={formData.fullName}
             onChange={handleChange}
             placeholder='John Doe'
-            className='h-11 bg-slate-900/60 border border-slate-800 rounded px-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors'
+            className='h-11 bg-[#F8FAFC] border border-[#DDE3EA] rounded-lg px-4 text-sm text-[#0B1628] placeholder-[#718096] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors'
           />
         </div>
 
@@ -187,7 +178,7 @@ const ContactFormContent: React.FC = () => {
         <div className='flex flex-col gap-1.5'>
           <label
             htmlFor='email'
-            className='text-xs font-bold text-slate-400 uppercase tracking-wider'
+            className='text-xs font-bold text-[#0B1628] uppercase tracking-wider'
           >
             Email Address <span className='text-amber-500'>*</span>
           </label>
@@ -199,7 +190,7 @@ const ContactFormContent: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder='johndoe@company.com'
-            className='h-11 bg-slate-900/60 border border-slate-800 rounded px-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors'
+            className='h-11 bg-[#F8FAFC] border border-[#DDE3EA] rounded-lg px-4 text-sm text-[#0B1628] placeholder-[#718096] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors'
           />
         </div>
       </div>
@@ -209,7 +200,7 @@ const ContactFormContent: React.FC = () => {
         <div className='flex flex-col gap-1.5'>
           <label
             htmlFor='company'
-            className='text-xs font-bold text-slate-400 uppercase tracking-wider'
+            className='text-xs font-bold text-[#0B1628] uppercase tracking-wider'
           >
             Company Name
           </label>
@@ -220,7 +211,7 @@ const ContactFormContent: React.FC = () => {
             value={formData.company}
             onChange={handleChange}
             placeholder='Industries Inc.'
-            className='h-11 bg-slate-900/60 border border-slate-800 rounded px-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors'
+            className='h-11 bg-[#F8FAFC] border border-[#DDE3EA] rounded-lg px-4 text-sm text-[#0B1628] placeholder-[#718096] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors'
           />
         </div>
 
@@ -228,7 +219,7 @@ const ContactFormContent: React.FC = () => {
         <div className='flex flex-col gap-1.5'>
           <label
             htmlFor='phone'
-            className='text-xs font-bold text-slate-400 uppercase tracking-wider'
+            className='text-xs font-bold text-[#0B1628] uppercase tracking-wider'
           >
             Phone Number
           </label>
@@ -238,8 +229,8 @@ const ContactFormContent: React.FC = () => {
             name='phone'
             value={formData.phone}
             onChange={handleChange}
-            placeholder='+1 (555) 000-0000'
-            className='h-11 bg-slate-900/60 border border-slate-800 rounded px-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors'
+            placeholder='+91 00000 00000'
+            className='h-11 bg-[#F8FAFC] border border-[#DDE3EA] rounded-lg px-4 text-sm text-[#0B1628] placeholder-[#718096] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors'
           />
         </div>
       </div>
@@ -248,7 +239,7 @@ const ContactFormContent: React.FC = () => {
       <div className='flex flex-col gap-1.5'>
         <label
           htmlFor='interest'
-          className='text-xs font-bold text-slate-400 uppercase tracking-wider'
+          className='text-xs font-bold text-[#0B1628] uppercase tracking-wider'
         >
           Product / Service of Interest
         </label>
@@ -257,20 +248,12 @@ const ContactFormContent: React.FC = () => {
           name='interest'
           value={formData.interest}
           onChange={handleChange}
-          className='h-11 bg-slate-900/60 border border-slate-800 rounded px-4 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer'
+          className='h-11 bg-[#F8FAFC] border border-[#DDE3EA] rounded-lg px-4 text-sm text-[#0B1628] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors appearance-none cursor-pointer'
         >
-          <option value='Deox products' className='bg-[#121826]'>
-            Deox products
-          </option>
-          <option value='Ingots' className='bg-[#121826]'>
-            Ingots
-          </option>
-          <option value='Scrap' className='bg-[#121826]'>
-            Scrap
-          </option>
-          <option value='Others' className='bg-[#121826]'>
-            Others
-          </option>
+          <option value='Deox products'>Deox products</option>
+          <option value='Ingots'>Ingots</option>
+          <option value='Scrap'>Scrap</option>
+          <option value='Others'>Others</option>
         </select>
       </div>
 
@@ -278,7 +261,7 @@ const ContactFormContent: React.FC = () => {
       <div className='flex flex-col gap-1.5'>
         <label
           htmlFor='message'
-          className='text-xs font-bold text-slate-400 uppercase tracking-wider'
+          className='text-xs font-bold text-[#0B1628] uppercase tracking-wider'
         >
           Project Specifications / Message{' '}
           <span className='text-amber-500'>*</span>
@@ -290,8 +273,8 @@ const ContactFormContent: React.FC = () => {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          placeholder='Please describe dimensions, quantity, alloys, standards (e.g. ASTM), or other project needs...'
-          className='bg-slate-900/60 border border-slate-800 rounded p-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors resize-none'
+          placeholder='Please describe dimensions, quantity, alloys, standards, or other project needs...'
+          className='bg-[#F8FAFC] border border-[#DDE3EA] rounded-lg p-4 text-sm text-[#0B1628] placeholder-[#718096] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors resize-none'
         />
       </div>
 
@@ -299,7 +282,7 @@ const ContactFormContent: React.FC = () => {
       <button
         type='submit'
         disabled={status === 'submitting'}
-        className='inline-flex h-12 w-full items-center justify-center gap-2 rounded bg-amber-500 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 active:scale-[0.98] disabled:opacity-55 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(245,158,11,0.15)] mt-2'
+        className='inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-amber-500 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 active:scale-[0.98] disabled:opacity-55 disabled:cursor-not-allowed shadow-md cursor-pointer mt-2'
       >
         {status === 'submitting' ? (
           <span>Sending Request...</span>
@@ -317,7 +300,7 @@ const ContactFormContent: React.FC = () => {
 export const ContactForm: React.FC = () => (
   <Suspense
     fallback={
-      <div className='p-8 text-center text-slate-400'>
+      <div className='p-8 text-center text-[#526176]'>
         Loading contact form...
       </div>
     }
