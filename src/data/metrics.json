@@ -1,6 +1,6 @@
 [
-  { "value": 25, "suffix": "+", "label": "Years of Experience" },
+  { "value": 15, "suffix": "+", "label": "Years of Experience" },
   { "value": 10, "suffix": "K+", "label": "Products Delivered" },
   { "value": 500, "suffix": "+", "label": "Happy Clients" },
-  { "value": 50, "suffix": "+", "label": "Countries Served" }
+  { "value": 20, "suffix": "+", "label": "Countries Served" }
 ]

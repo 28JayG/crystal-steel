@@ -145,12 +145,15 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Core Values Section */}
-        <section className='mb-24 bg-[#F5F7FA] p-8 sm:p-12 md:p-16 rounded-3xl border border-[#DDE3EA] text-center'>
-          <Typography variant='accentLabel' className='mb-2 block'>
+        {/* Core Values Section (Dark Navy #0B1628) */}
+        <section className='mb-24 bg-[#0B1628] p-8 sm:p-12 md:p-16 rounded-3xl border border-[#1E293B] shadow-2xl text-center text-white'>
+          <Typography
+            variant='accentLabel'
+            className='mb-2 block text-amber-500'
+          >
             Our Core Values
           </Typography>
-          <h2 className='text-3xl sm:text-4xl font-extrabold text-[#0B1628] tracking-tight mb-12 relative inline-block'>
+          <h2 className='text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-12 relative inline-block'>
             Built on Integrity
             <span className='absolute -bottom-3 left-1/2 -translate-x-1/2 w-14 h-1 bg-amber-500 rounded-full' />
           </h2>
@@ -161,15 +164,15 @@ export default function AboutPage() {
               return (
                 <div
                   key={idx}
-                  className='flex flex-col items-center p-8 rounded-2xl bg-white border border-[#DDE3EA] hover:border-amber-500 shadow-xs hover:shadow-lg transition-all text-center'
+                  className='flex flex-col items-center p-8 rounded-2xl bg-[#162236] border border-[#24334A] hover:border-amber-500 shadow-lg hover:shadow-2xl transition-all duration-300 text-center group hover:-translate-y-1'
                 >
-                  <div className='flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-500 mb-6'>
+                  <div className='flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-300'>
                     <Icon className='h-7 w-7' />
                   </div>
-                  <h3 className='mb-3 text-lg font-bold text-[#0B1628]'>
+                  <h3 className='mb-3 text-lg font-bold text-white'>
                     {val.title}
                   </h3>
-                  <p className='text-sm text-[#526176] leading-relaxed'>
+                  <p className='text-sm text-[#CBD5E1] leading-relaxed'>
                     {val.description}
                   </p>
                 </div>

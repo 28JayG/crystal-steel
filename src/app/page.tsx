@@ -134,15 +134,15 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className='flex flex-col items-center sm:items-start text-center sm:text-left p-8 rounded-2xl bg-white border border-[#DDE3EA] hover:border-amber-500 shadow-xs hover:shadow-lg transition-all duration-300 group hover:-translate-y-1'
+                  className='flex flex-col items-center sm:items-start text-center sm:text-left p-8 rounded-2xl bg-[#0B1628] border border-[#1E293B] hover:border-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1'
                 >
-                  <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-300'>
+                  <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-300'>
                     <Icon className='h-6 w-6' />
                   </div>
-                  <h3 className='text-lg font-bold text-[#0B1628] mb-2'>
+                  <h3 className='text-lg font-bold text-white mb-2'>
                     {feature.title}
                   </h3>
-                  <p className='text-sm text-[#526176] leading-relaxed'>
+                  <p className='text-sm text-[#CBD5E1] leading-relaxed'>
                     {feature.description}
                   </p>
                 </div>
