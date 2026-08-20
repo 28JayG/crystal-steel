@@ -7,6 +7,7 @@ import {
   Target,
   Zap,
   Milestone,
+  ArrowRight,
 } from 'lucide-react';
 import { Typography } from '@/components/ui/Typography';
 
@@ -84,8 +85,8 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className='min-h-screen bg-white py-14 md:py-20'>
-      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div className='min-h-screen bg-white pt-14 md:pt-20'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-14 md:pb-20'>
         {/* Breadcrumbs */}
         <nav className='flex items-center gap-2 mb-8 text-xs sm:text-sm font-semibold text-[#718096]'>
           <Link href='/' className='hover:text-amber-500 transition-colors'>
@@ -223,12 +224,12 @@ export default function AboutPage() {
         </section>
 
         {/* Leadership Section */}
-        <section className='mb-24 bg-[#F5F7FA] p-8 sm:p-12 md:p-16 rounded-3xl border border-[#DDE3EA] text-center'>
+        <section className=' bg-[#0B1628] p-8 sm:p-12 md:p-16 rounded-3xl border border-[#1E293B] text-center'>
           <div className='mb-14'>
             <Typography variant='accentLabel' className='mb-2 block'>
               Our Leadership
             </Typography>
-            <h2 className='text-3xl sm:text-4xl font-extrabold text-[#0B1628] tracking-tight relative inline-block'>
+            <h2 className='text-3xl sm:text-4xl font-extrabold text-white tracking-tight relative inline-block'>
               Meet Our Leadership Team
               <span className='absolute -bottom-3 left-1/2 -translate-x-1/2 w-14 h-1 bg-amber-500 rounded-full' />
             </h2>
@@ -238,13 +239,13 @@ export default function AboutPage() {
             {team.map((member, idx) => (
               <div
                 key={idx}
-                className='flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-[#DDE3EA] hover:border-amber-500 hover:shadow-lg transition-all duration-200 group'
+                className='flex flex-col items-center text-center p-8 rounded-2xl bg-[#162236] border border-[#24334A] hover:border-amber-500 hover:shadow-lg transition-all duration-200 group'
               >
                 {/* Avatar Graphic */}
                 <div className='flex h-20 w-20 items-center justify-center rounded-full bg-amber-50 border-2 border-amber-200 text-2xl font-extrabold text-amber-600 mb-6 group-hover:border-amber-500 group-hover:scale-105 transition-all shadow-xs'>
                   {member.imageLetter}
                 </div>
-                <h3 className='mb-1 text-lg font-bold text-[#0B1628]'>
+                <h3 className='mb-1 text-lg font-bold text-white'>
                   {member.name}
                 </h3>
                 <span className='text-xs font-bold text-amber-600 uppercase tracking-wider block'>
@@ -254,33 +255,36 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+      </div>
 
-        {/* Bottom CTA Banner (Contained Navy Panel) */}
-        <div className='rounded-2xl bg-[#0B1628] border border-[#1E293B] p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center gap-6 shadow-2xl text-white'>
-          <h2 className='text-2xl md:text-3xl font-extrabold text-white'>
+      {/* Partner with Crystal Section (LIGHT GRAY #EEF2F6 / #F5F7FA) */}
+      <section className='w-full bg-[#EEF2F6] py-20 md:py-28 text-center'>
+        <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 flex flex-col gap-6 items-center'>
+          <h2 className='text-3xl sm:text-4xl font-extrabold text-[#0B1628] tracking-tight'>
             Partner with Crystal Metal Industry
           </h2>
-          <p className='max-w-xl text-[#CBD5E1] text-sm md:text-base leading-relaxed'>
+          <p className='text-base sm:text-lg text-[#526176] max-w-xl leading-relaxed'>
             Whether you require Aluminum Deoxidizer or other secondary aluminum
             products, we are ready to build reliable, long-term industrial
             partnerships.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center mt-2 w-full sm:w-auto'>
+          <div className='mt-2 flex gap-4'>
             <Link
               href='/contact'
-              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-amber-500 px-8 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 active:scale-[0.98] shadow-md'
+              className='inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-500 px-8 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-amber-500/20'
             >
               Contact Us Today
+              <ArrowRight className='h-4 w-4' />
             </Link>
             <Link
               href='/products'
-              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-white/40 bg-transparent px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]'
+              className='inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-slate-950 bg-transparent px-8 text-sm font-bold text-slate-950 transition-all hover:bg-slate-950/10 active:scale-[0.98]'
             >
               Explore Products
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
