@@ -72,18 +72,18 @@ export const FaqSection: React.FC = () => {
           return (
             <div
               key={idx}
-              className='rounded bg-[#121826] border border-slate-800 overflow-hidden transition-all'
+              className='rounded-lg bg-white border border-slate-200 shadow-xs overflow-hidden transition-all'
             >
               <button
                 onClick={() => toggleAccordion(idx)}
                 type='button'
-                className='w-full flex justify-between items-center p-6 text-left hover:bg-slate-900/40 transition-colors focus:outline-none'
+                className='w-full flex justify-between items-center p-6 text-left hover:bg-slate-50/80 transition-colors focus:outline-none cursor-pointer'
               >
-                <span className='font-bold text-sm md:text-base text-white pr-4'>
+                <span className='font-bold text-sm md:text-base text-slate-900 pr-4'>
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`h-5 w-5 text-amber-500 shrink-0 transition-transform duration-300 ${
+                  className={`h-5 w-5 text-amber-600 shrink-0 transition-transform duration-300 ${
                     isOpen ? 'rotate-180' : 'rotate-0'
                   }`}
                 />
@@ -92,11 +92,11 @@ export const FaqSection: React.FC = () => {
               <div
                 className={`transition-all duration-300 ease-in-out ${
                   isOpen
-                    ? 'max-h-60 border-t border-slate-800/60 opacity-100'
+                    ? 'max-h-60 border-t border-slate-100 opacity-100'
                     : 'max-h-0 opacity-0 pointer-events-none'
                 }`}
               >
-                <div className='p-6 text-sm text-slate-400 leading-relaxed bg-[#0F1420]/30'>
+                <div className='p-6 text-sm text-slate-600 leading-relaxed bg-slate-50/60'>
                   {faq.answer}
                 </div>
               </div>
