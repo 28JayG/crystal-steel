@@ -45,71 +45,67 @@ export default function Home() {
 
   return (
     <div className='flex flex-col min-h-screen bg-white'>
-      {/* 1. Hero Section (Predominantly LIGHT / WHITE) */}
-      <section className='relative bg-white py-16 md:py-24 border-b border-[#DDE3EA] overflow-hidden'>
-        <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-          <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center'>
-            {/* Left Column: Text Content */}
-            <div className='lg:col-span-7 flex flex-col gap-6 text-left'>
-              <div className='inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-50 px-4 py-1.5 self-start'>
-                <span className='h-2 w-2 rounded-full bg-amber-500 animate-pulse' />
-                <span className='text-xs font-bold uppercase tracking-wider text-amber-600'>
-                  PREMIUM SECONDARY ALUMINUM
-                </span>
-              </div>
+      {/* 1. Hero Section (Industrial Background) */}
+      <section className='relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden border-b border-[#DDE3EA]'>
+        {/* Full Hero Background Image */}
+        <div className='absolute inset-0 z-0'>
+          <Image
+            src='/images/hero_bg.png'
+            alt='Industrial metal processing facility'
+            fill
+            priority
+            sizes='100vw'
+            className='object-cover'
+          />
+          {/* High-contrast gradient overlay */}
+          <div className='absolute inset-0 bg-gradient-to-r from-[#0B1628]/95 via-[#0B1628]/85 to-[#0B1628]/50' />
+        </div>
 
-              <h1 className='text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0B1628] leading-[1.1]'>
-                Turning Scrap Into <br />
-                <span className='text-amber-500 underline decoration-amber-500/40 decoration-4 underline-offset-8'>
-                  Industrial Value
-                </span>
-              </h1>
-
-              <p className='text-base sm:text-lg text-[#526176] max-w-2xl leading-relaxed'>
-                Crystal Metal Industry recycles aluminum scrap into high-quality
-                secondary aluminum products, with a strong focus on Aluminum
-                Deoxidizer for the steel industry.
-              </p>
-
-              <div className='mt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4'>
-                <Link
-                  href='/products'
-                  className='inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-500 px-8 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-amber-500/20'
-                >
-                  Explore Products
-                  <ArrowRight className='h-4 w-4' />
-                </Link>
-                <Link
-                  href='/contact'
-                  className='inline-flex h-12 items-center justify-center rounded-lg border-2 border-[#0B1628] bg-white px-8 text-sm font-bold text-[#0B1628] transition-all hover:bg-[#0B1628] hover:text-white active:scale-[0.98]'
-                >
-                  Get a Quote
-                </Link>
-              </div>
+        <div className='relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 w-full'>
+          <div className='max-w-3xl flex flex-col gap-6 text-left'>
+            <div className='inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 self-start backdrop-blur-md'>
+              <span className='h-2 w-2 rounded-full bg-amber-500 animate-pulse' />
+              <span className='text-xs font-bold uppercase tracking-wider text-amber-400'>
+                PREMIUM SECONDARY ALUMINUM
+              </span>
             </div>
 
-            {/* Right Column: Industrial Visual Card */}
-            <div className='lg:col-span-5 relative'>
-              <div className='relative h-[340px] sm:h-[420px] rounded-2xl overflow-hidden border border-[#DDE3EA] shadow-xl group'>
-                <Image
-                  src='/images/hero_bg.png'
-                  alt='Industrial metal processing facility'
-                  fill
-                  priority
-                  sizes='(max-width: 1024px) 100vw, 45vw'
-                  className='object-cover transition-transform duration-700 group-hover:scale-105'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-[#0B1628]/80 via-[#0B1628]/20 to-transparent' />
-                <div className='absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-white/40 shadow-lg text-left'>
-                  <span className='text-[10px] font-bold text-amber-600 uppercase tracking-widest block mb-0.5'>
-                    Certified Manufacturing
-                  </span>
-                  <p className='text-xs sm:text-sm font-bold text-[#0B1628]'>
-                    1,000 MT/Month Secondary Aluminum Capacity
-                  </p>
-                </div>
-              </div>
+            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]'>
+              Turning Scrap Into <br />
+              <span className='text-amber-500 underline decoration-amber-500/40 decoration-4 underline-offset-8'>
+                Industrial Value
+              </span>
+            </h1>
+
+            <p className='text-base sm:text-lg text-[#CBD5E1] max-w-2xl leading-relaxed'>
+              Crystal Metal Industry recycles aluminum scrap into high-quality
+              secondary aluminum products, with a strong focus on Aluminum
+              Deoxidizer for the steel industry.
+            </p>
+
+            <div className='mt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4'>
+              <Link
+                href='/products'
+                className='inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-500 px-8 text-sm font-bold text-slate-950 transition-all hover:bg-amber-600 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-amber-500/20'
+              >
+                Explore Products
+                <ArrowRight className='h-4 w-4' />
+              </Link>
+              <Link
+                href='/contact'
+                className='inline-flex h-12 items-center justify-center rounded-lg border-2 border-white/80 bg-white/10 backdrop-blur-md px-8 text-sm font-bold text-white transition-all hover:bg-white hover:text-slate-950 active:scale-[0.98]'
+              >
+                Get a Quote
+              </Link>
             </div>
+
+            {/* Capacity Highlight Badge */}
+            {/* <div className='mt-4 inline-flex items-center gap-3 p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 w-fit shadow-md'>
+              <span className='h-2.5 w-2.5 rounded-full bg-amber-400' />
+              <span className='text-xs sm:text-sm font-semibold text-white'>
+                Installed Capacity: <strong className='text-amber-400'>1,000 MT/Month</strong> (12,000 MTPA)
+              </span>
+            </div> */}
           </div>
         </div>
       </section>
