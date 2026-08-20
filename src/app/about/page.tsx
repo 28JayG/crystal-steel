@@ -67,28 +67,22 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: 'Marcus Vance',
-      role: 'CEO & Founder',
-      bio: 'Over 30 years of industrial metal industry experience, guiding Crystal Metal from foundation to global export.',
-      imageLetter: 'M',
-    },
-    {
-      name: 'Elena Rostova',
-      role: 'Chief Metallurgical Engineer',
-      bio: 'Leads our material testing lab, ensuring chemical integrity and stress tolerances for custom alloy blends.',
-      imageLetter: 'E',
-    },
-    {
-      name: 'David Miller',
-      role: 'Head of CNC Operations',
-      bio: 'Manages our automated fabrication lines, translating complex blueprints into precision machined parts.',
-      imageLetter: 'D',
-    },
-    {
-      name: 'Sarah Jenkins',
-      role: 'Director of Global Logistics',
-      bio: 'Oversees global distribution, managing customs clearance and shipping coordinates to over 50 countries.',
+      name: 'Shivam Poddar',
+      role: 'Director',
+      bio: '',
       imageLetter: 'S',
+    },
+    {
+      name: 'Vijay Mittal',
+      role: 'Director',
+      bio: '',
+      imageLetter: 'V',
+    },
+    {
+      name: 'Navin Poddar',
+      role: 'Director',
+      bio: '',
+      imageLetter: 'N',
     },
   ];
 
@@ -249,7 +243,7 @@ export default function AboutPage() {
             </Typography>
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {team.map((member, idx) => (
               <div
                 key={idx}

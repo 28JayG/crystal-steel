@@ -73,7 +73,8 @@ export default function ContactPage() {
                       Physical Address
                     </span>
                     <span className='text-slate-400'>
-                      Jamshedpur, Jharkhand, India
+                      1/1 Awas Crystal, Road No.1, Contractors Area, Bistupur,
+                      Jamshedpur, Jharkhand, India - 831001
                     </span>
                   </div>
                 </li>
@@ -100,10 +101,16 @@ export default function ContactPage() {
                       Email Support
                     </span>
                     <a
-                      href='mailto:info@crystalmetal.com'
+                      href='mailto:info@crystalmetalindustry.com'
                       className='text-slate-400 hover:text-amber-500 transition-colors'
                     >
-                      info@crystalmetal.com
+                      info@crystalmetalindustry.com
+                    </a>
+                    <a
+                      href='mailto:shivam@crystalmetalindustry.com'
+                      className='text-slate-400 hover:text-amber-500 transition-colors'
+                    >
+                      shivam@crystalmetalindustry.com
                     </a>
                   </div>
                 </li>
@@ -115,7 +122,7 @@ export default function ContactPage() {
                       Business Hours
                     </span>
                     <span className='text-slate-400'>
-                      Monday - Friday: 8:00 AM - 5:00 PM EST
+                      Monday - Saturday: 9:00 AM - 7:00 PM IST
                     </span>
                   </div>
                 </li>

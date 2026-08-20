@@ -259,20 +259,17 @@ const ContactFormContent: React.FC = () => {
           onChange={handleChange}
           className='h-11 bg-slate-900/60 border border-slate-800 rounded px-4 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer'
         >
-          <option value='Steel Sheets' className='bg-[#121826]'>
-            Steel Sheets & Plates
+          <option value='Deox products' className='bg-[#121826]'>
+            Deox products
           </option>
-          <option value='Metal Pipes' className='bg-[#121826]'>
-            Metal Pipes & Tubes
+          <option value='Ingots' className='bg-[#121826]'>
+            Ingots
           </option>
-          <option value='Custom Fabrication' className='bg-[#121826]'>
-            Custom Metal Fabrication
+          <option value='Scrap' className='bg-[#121826]'>
+            Scrap
           </option>
-          <option value='CNC Machining' className='bg-[#121826]'>
-            Precision CNC Machining
-          </option>
-          <option value='Other' className='bg-[#121826]'>
-            Other Components / Alloys
+          <option value='Others' className='bg-[#121826]'>
+            Others
           </option>
         </select>
       </div>
