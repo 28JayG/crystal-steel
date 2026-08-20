@@ -17,19 +17,25 @@ export async function POST(request: Request) {
       );
     }
 
-    const smtpHost = process.env.SMTP_HOST || 'smtp.office365.com';
-    const smtpPort = parseInt(process.env.SMTP_PORT || '587', 10);
-    const smtpSecure = process.env.SMTP_SECURE === 'true';
+    const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
+    const smtpPort = parseInt(process.env.SMTP_PORT || '465', 10);
+    const smtpSecure =
+      process.env.SMTP_SECURE !== undefined
+        ? process.env.SMTP_SECURE === 'true'
+        : smtpPort === 465;
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
+    const smtpFrom = process.env.SMTP_FROM || smtpUser;
     const recipientEmail = (
-      process.env.CONTACT_EMAIL_TO || 'crystalmetalindustry.2026@outlook.com'
+      process.env.CONTACT_EMAIL_TO ||
+      smtpUser ||
+      'info@crystalmetalindustry.com'
     ).trim();
 
     // Validate SMTP credentials
-    if (!smtpPass) {
+    if (!smtpUser || !smtpPass) {
       console.error(
-        '❌ SMTP_PASS is missing in environment variables (.env.local).',
+        '❌ SMTP_USER or SMTP_PASS is missing in environment variables (.env.local).',
       );
       return NextResponse.json(
         { error: 'Failed to send message try again later.' },
@@ -38,7 +44,7 @@ export async function POST(request: Request) {
     }
 
     console.log(
-      `📧 [DISPATCHING EMAIL] From: "${fullName}" <${smtpUser}> -> TO: ${recipientEmail}`,
+      `📧 [DISPATCHING EMAIL via SMTP (${smtpHost}:${smtpPort})] From: "${fullName}" <${smtpFrom}> -> TO: ${recipientEmail}`,
     );
 
     // Configure Nodemailer transporter
@@ -46,16 +52,18 @@ export async function POST(request: Request) {
       host: smtpHost,
       port: smtpPort,
       secure: smtpSecure,
-      requireTLS: true,
       auth: {
         user: smtpUser,
         pass: smtpPass,
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
 
     // Email template formatting
     const mailOptions = {
-      from: `"${fullName.replace(/"/g, '')}" <${smtpUser}>`,
+      from: `"${fullName.replace(/"/g, '')}" <${smtpFrom}>`,
       replyTo: email,
       to: recipientEmail,
       subject: `[Contact Form] ${interest || 'General Inquiry'} - ${fullName}`,
