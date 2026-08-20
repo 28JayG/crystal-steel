@@ -1,0 +1,50 @@
+[
+  {
+    "id": "spectrometer",
+    "name": "Spectrometer (Optical Emission)",
+    "category": "Chemical & Composition",
+    "measurement": "Chemical Analysis of Alloys & Trace Elements",
+    "description": "High-precision optical emission spectrometer used for rapid, multi-element quantitative chemical analysis to verify strict metallurgical standards before casting and shipping.",
+    "badge": "Core Testing"
+  },
+  {
+    "id": "vacuum-analysis",
+    "name": "Vacuum Analysis System",
+    "category": "Gas & Molten Quality",
+    "measurement": "Dissolved Hydrogen in Molten Alloys",
+    "description": "Measures dissolved hydrogen gas levels in liquid aluminum melts to prevent gas porosity and ensure superior mechanical properties of the end products.",
+    "badge": "Purity"
+  },
+  {
+    "id": "pin-hole-analysis",
+    "name": "Pin Hole Analysis",
+    "category": "Porosity & Microstructure",
+    "measurement": "Density & Porosity Verification of Alloys",
+    "description": "Evaluates specimen solidification and porosity levels to confirm optimal alloy density and sound internal crystal structure.",
+    "badge": "Integrity"
+  },
+  {
+    "id": "densitometer",
+    "name": "Densitometer Analysis",
+    "category": "Density & Physical Properties",
+    "measurement": "Density of Petroleum Products & Consumables",
+    "description": "Accurately determines specific gravity and density of auxiliary consumables and process fluids to maintain strict operational controls.",
+    "badge": "Process Control"
+  },
+  {
+    "id": "viscosity-meter",
+    "name": "Viscosity Meter Analysis",
+    "category": "Rheological Testing",
+    "measurement": "Viscosity of Petroleum Products & Lubricants",
+    "description": "Monitors fluid viscosity of industrial oils, lubricants, and fuel products ensuring optimal furnace operation and thermal efficiency.",
+    "badge": "Fluid Dynamics"
+  },
+  {
+    "id": "hydrometer",
+    "name": "Hydrometer",
+    "category": "Liquid Density & Specific Gravity",
+    "measurement": "Specific Gravity & Fluid Density Testing",
+    "description": "Reliable testing instrument for rapid verification of liquid density and purity across raw materials and testing chemicals.",
+    "badge": "Physical Testing"
+  }
+]

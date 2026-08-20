@@ -242,7 +242,7 @@ export default function AboutPage() {
                 className='flex flex-col items-center text-center p-8 rounded-2xl bg-[#162236] border border-[#24334A] hover:border-amber-500 hover:shadow-lg transition-all duration-200 group'
               >
                 {/* Avatar Graphic */}
-                <div className='flex h-20 w-20 items-center justify-center rounded-full bg-amber-50 border-2 border-amber-200 text-2xl font-extrabold text-amber-600 mb-6 group-hover:border-amber-500 group-hover:scale-105 transition-all shadow-xs'>
+                <div className='flex h-20 w-20 items-center justify-center rounded-full bg-amber-500/10 text-2xl font-extrabold text-amber-600 mb-6 group-hover:border-amber-500 group-hover:scale-105 transition-all shadow-xs'>
                   {member.imageLetter}
                 </div>
                 <h3 className='mb-1 text-lg font-bold text-white'>

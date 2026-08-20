@@ -3,17 +3,30 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Hammer } from 'lucide-react';
+import { Menu, X, Hammer, ChevronDown } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isQualityOpen, setIsQualityOpen] = useState(false);
+  const [mobileQualityOpen, setMobileQualityOpen] = useState(true);
   const pathname = usePathname();
 
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Products', href: '/products' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact Us', href: '/contact' },
+  const qualityLinks = [
+    {
+      name: 'Policies',
+      href: '/quality/policies',
+      description: 'Quality standards & HSE policies',
+    },
+    {
+      name: 'Test & Equipment',
+      href: '/quality/test-equipment',
+      description: 'Laboratory testing & instrumentation',
+    },
+    {
+      name: 'Quality Certification',
+      href: '/quality/certification',
+      description: 'Defect prevention & traceability',
+    },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -24,6 +37,8 @@ export const Header: React.FC = () => {
     }
     return pathname.startsWith(path);
   };
+
+  const isQualityActive = pathname.startsWith('/quality');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#DDE3EA] bg-white/95 backdrop-blur-md">
@@ -46,19 +61,111 @@ export const Header: React.FC = () => {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-semibold transition-colors duration-200 ${
-                  isActive(item.href)
+            <Link
+              href="/"
+              className={`text-sm font-semibold transition-colors duration-200 ${
+                isActive('/') && pathname === '/'
+                  ? 'text-amber-500 font-bold'
+                  : 'text-[#526176] hover:text-[#0B1628]'
+              }`}
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/products"
+              className={`text-sm font-semibold transition-colors duration-200 ${
+                isActive('/products')
+                  ? 'text-amber-500 font-bold'
+                  : 'text-[#526176] hover:text-[#0B1628]'
+              }`}
+            >
+              Products
+            </Link>
+
+            {/* Quality Dropdown Menu */}
+            <div
+              className="relative group py-2"
+              onMouseEnter={() => setIsQualityOpen(true)}
+              onMouseLeave={() => setIsQualityOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setIsQualityOpen(!isQualityOpen)}
+                className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200 focus:outline-none cursor-pointer ${
+                  isQualityActive
                     ? 'text-amber-500 font-bold'
                     : 'text-[#526176] hover:text-[#0B1628]'
                 }`}
+                aria-expanded={isQualityOpen}
+                aria-haspopup="true"
               >
-                {item.name}
-              </Link>
-            ))}
+                <span>Quality</span>
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    isQualityOpen ? 'rotate-180 text-amber-500' : 'group-hover:rotate-180'
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Container with hover bridge padding */}
+              <div
+                className={`absolute top-full left-0 pt-2 w-64 z-50 transition-all duration-200 ${
+                  isQualityOpen
+                    ? 'opacity-100 visible translate-y-0 pointer-events-auto'
+                    : 'opacity-0 invisible -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto'
+                }`}
+              >
+                <div className="rounded-xl border border-[#DDE3EA] bg-white p-2 shadow-xl">
+                  <div className="flex flex-col gap-1">
+                    {qualityLinks.map((subItem) => {
+                      const isSubActive = pathname === subItem.href;
+                      return (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          onClick={() => setIsQualityOpen(false)}
+                          className={`flex flex-col rounded-lg px-3.5 py-2.5 transition-colors ${
+                            isSubActive
+                              ? 'bg-amber-50 text-amber-600 font-bold'
+                              : 'hover:bg-slate-50 text-[#0B1628]'
+                          }`}
+                        >
+                          <span className="text-sm font-bold">
+                            {subItem.name}
+                          </span>
+                          <span className="text-xs text-[#718096] font-normal mt-0.5">
+                            {subItem.description}
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Link
+              href="/about"
+              className={`text-sm font-semibold transition-colors duration-200 ${
+                isActive('/about')
+                  ? 'text-amber-500 font-bold'
+                  : 'text-[#526176] hover:text-[#0B1628]'
+              }`}
+            >
+              About
+            </Link>
+
+            <Link
+              href="/contact"
+              className={`text-sm font-semibold transition-colors duration-200 ${
+                isActive('/contact')
+                  ? 'text-amber-500 font-bold'
+                  : 'text-[#526176] hover:text-[#0B1628]'
+              }`}
+            >
+              Contact Us
+            </Link>
           </nav>
 
           {/* Desktop Get a Quote Button */}
@@ -71,7 +178,7 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Hamburguer Toggle */}
+          {/* Mobile Hamburger Toggle */}
           <div className="flex md:hidden">
             <button
               onClick={toggleMenu}
@@ -89,20 +196,93 @@ export const Header: React.FC = () => {
       {isOpen && (
         <div className="md:hidden border-b border-[#DDE3EA] bg-white shadow-lg">
           <div className="space-y-1 px-4 py-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors ${
-                  isActive(item.href)
-                    ? 'bg-amber-50 text-amber-500 font-bold'
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors ${
+                pathname === '/'
+                  ? 'bg-amber-50 text-amber-500 font-bold'
+                  : 'text-[#526176] hover:bg-slate-50 hover:text-[#0B1628]'
+              }`}
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/products"
+              onClick={() => setIsOpen(false)}
+              className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors ${
+                isActive('/products')
+                  ? 'bg-amber-50 text-amber-500 font-bold'
+                  : 'text-[#526176] hover:bg-slate-50 hover:text-[#0B1628]'
+              }`}
+            >
+              Products
+            </Link>
+
+            {/* Mobile Quality Accordion */}
+            <div className="rounded-lg overflow-hidden">
+              <button
+                type="button"
+                onClick={() => setMobileQualityOpen(!mobileQualityOpen)}
+                className={`flex w-full items-center justify-between px-3 py-2.5 text-base font-semibold transition-colors ${
+                  isQualityActive
+                    ? 'text-amber-600 font-bold'
                     : 'text-[#526176] hover:bg-slate-50 hover:text-[#0B1628]'
                 }`}
               >
-                {item.name}
-              </Link>
-            ))}
+                <span>Quality</span>
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    mobileQualityOpen ? 'rotate-180 text-amber-500' : ''
+                  }`}
+                />
+              </button>
+
+              {mobileQualityOpen && (
+                <div className="pl-4 pr-2 pb-2 space-y-1 bg-slate-50/70 rounded-lg my-1">
+                  {qualityLinks.map((subItem) => (
+                    <Link
+                      key={subItem.name}
+                      href={subItem.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                        pathname === subItem.href
+                          ? 'bg-amber-100/70 text-amber-700 font-bold'
+                          : 'text-[#526176] hover:bg-white hover:text-[#0B1628]'
+                      }`}
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/about"
+              onClick={() => setIsOpen(false)}
+              className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors ${
+                isActive('/about')
+                  ? 'bg-amber-50 text-amber-500 font-bold'
+                  : 'text-[#526176] hover:bg-slate-50 hover:text-[#0B1628]'
+              }`}
+            >
+              About
+            </Link>
+
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors ${
+                isActive('/contact')
+                  ? 'bg-amber-50 text-amber-500 font-bold'
+                  : 'text-[#526176] hover:bg-slate-50 hover:text-[#0B1628]'
+              }`}
+            >
+              Contact Us
+            </Link>
+
             <div className="pt-4 px-3">
               <Link
                 href="/contact"
@@ -118,3 +298,4 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+

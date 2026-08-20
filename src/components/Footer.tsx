@@ -9,9 +9,9 @@ export const Footer: React.FC = () => {
     <footer className='w-full bg-[#0B1628] border-t border-[#1E293B] text-[#CBD5E1] py-16'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Top Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12'>
           {/* Column 1: Company Profile */}
-          <div className='flex flex-col gap-5'>
+          <div className='flex flex-col gap-5 sm:col-span-2 lg:col-span-1'>
             <Link href='/' className='flex items-center gap-3 group'>
               <div className='flex h-9 w-9 items-center justify-center rounded-lg bg-amber-500 text-slate-950 font-bold'>
                 <Hammer className='h-4.5 w-4.5' />
@@ -73,7 +73,40 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Products */}
+          {/* Column 3: Quality */}
+          <div className='flex flex-col gap-4'>
+            <h4 className='text-white text-sm font-bold tracking-wider uppercase'>
+              Quality
+            </h4>
+            <ul className='flex flex-col gap-3 text-sm'>
+              <li>
+                <Link
+                  href='/quality/policies'
+                  className='hover:text-amber-500 transition-colors'
+                >
+                  Policies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/quality/test-equipment'
+                  className='hover:text-amber-500 transition-colors'
+                >
+                  Test & Equipment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/quality/certification'
+                  className='hover:text-amber-500 transition-colors'
+                >
+                  Quality Certification
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Products */}
           <div className='flex flex-col gap-4'>
             <h4 className='text-white text-sm font-bold tracking-wider uppercase'>
               Products
@@ -122,7 +155,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 4: Contact Info */}
+          {/* Column 5: Contact Info */}
           <div className='flex flex-col gap-4'>
             <h4 className='text-white text-sm font-bold tracking-wider uppercase'>
               Contact
